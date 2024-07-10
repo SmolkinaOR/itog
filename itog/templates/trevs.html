@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Все туры</title>
+</head>
+<body>
+<!-- меню начало -->
+<<table id="cap_">
+    <tr>
+        <th><a href="http://127.0.0.1:5000"> Главная </a></th>
+        <th><a href="http://127.0.0.1:5000/trev_form"> Добавить новый тур </a></th>
+        <th><a href="http://127.0.0.1:5000/trevs"> Все туры </a></th>
+        <th><a href="http://127.0.0.1:5000/trev_form_sh"> найти тур по номеру </a></th>
+        <th><a href="http://127.0.0.1:5000/trev/3">Тур №3 </a></th>
+    </tr>
+</table>
+<!-- меню конец -->
+    <!-- Заголовок страницы -->
+    <h1>туры</h1>
+
+    <!-- Таблица для вывода списка фильмов -->
+    <table border="1">
+      <!-- Заголовок таблицы -->
+      <tr>
+        <th>Пункт назначения</th>
+        <th>Дата отправления</th>
+        <th>Дата прибытия</th>
+        <th>Бюджет</th>
+        <th>Сервис</th>
+        <th>Тип тура</th>
+      </tr>
+
+       {% for trev in trev %}
+      <tr class="tr_films">
+        <td>{{trev.destination}}</td>
+        <td>{{trev.d_date}}</td>
+        <td>{{trev.r_date}}</td>
+        <td>{{trev.budget}}</td>
+        <td>{{trev.services}}</td>
+        <td>{{trev.nametype}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+<p>
+   количество туров в базе:  {{pwww}}
+</p>
+<p>
+   Тур с максимальным бюджетом: {{pww1.destination}}<br>
+   бюджет: {{pww1.budget}}<br>
+   сервис: {{pww1.services}}<br>
+   тип тура: {{pww1.nametype}}
+</p>
+<p>
+   Тур с минимальным бюджетом: {{pww2.destination}}<br>
+   бюджет: {{pww2.budget}}<br>
+   сервис: {{pww2.services}}<br>
+   тип тура: {{pww2.nametype}}
+</p>
+
+
+
+
+
+
+
+  </body>
+</html>

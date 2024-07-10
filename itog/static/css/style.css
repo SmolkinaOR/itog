@@ -1,0 +1,32 @@
+    tr{
+    background: #b9f8b9;
+    color:#073c19
+}
+body{
+background: #d8f5cc;
+color: #1e4e09;
+   }
+ A:link{
+    color: #073c19; /* */
+   }
+   A:visited{
+    color: #073c19; /* Цвет посещенных ссылок */
+   }
+   A:hover{
+    color: #001760; /* Цвет активных ссылок */
+   }
+.tr_films{
+    background: #b9f8b9 ;
+    color:#0b550b;
+}
+}
+.cap_{
+
+    background: #d3fce1;
+}
+img{
+    border-radius: 10cap;
+
+}
+
+    

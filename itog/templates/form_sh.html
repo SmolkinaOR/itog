@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Поиск тура по ID</title>
+</head>
+<body>
+<table id="cap_">
+    <tr>
+        <th><a href="http://127.0.0.1:5000"> Главная </a></th>
+        <th><a href="http://127.0.0.1:5000/trev_form"> Добавить новый тур </a></th>
+        <th><a href="http://127.0.0.1:5000/trevs"> Все туры </a></th>
+        <th><a href="http://127.0.0.1:5000/trev_form_sh"> найти тур по номеру </a></th>
+        <th><a href="http://127.0.0.1:5000/trev/3">Тур №3 </a></th>
+    </tr>
+</table>
+<form method="POST">
+    <!-- Поле ввода Id фильма -->
+    <p>{{ form.id.label }} {{ form.id() }}</p>
+
+    <!-- Кнопка отправки формы -->
+    <input type="submit" value="найти">
+</form>
+
+
+</body>
+</html>
